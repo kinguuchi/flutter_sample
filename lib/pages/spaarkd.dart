@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:login/pages/list_view_page.dart';
-import 'package:login/pages/login_page.dart';
-import 'package:login/pages/widget_page.dart';
+import 'index.dart';
 
 class Spaarkd extends StatefulWidget {
   const Spaarkd({super.key});
@@ -21,10 +19,10 @@ class _SpaarkdState extends State<Spaarkd> {
   }
 
   final List<Widget> _pages = [
-    LoginPage(),
-    WidgetPage(),
     ListPage(),
     WidgetPage(),
+    GridPage(),
+    PageViewPage(),
     LoginPage(),
   ];
 
@@ -32,6 +30,22 @@ class _SpaarkdState extends State<Spaarkd> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: _pages[_selectedIndex],
+      appBar: AppBar(
+        elevation: 0,
+        title: Text(
+          'SPAARKD',
+          style: TextStyle(
+            color: Colors.black,
+          ),
+        ),
+        leading: Icon(
+          Icons.auto_awesome,
+        ),
+        actions: [
+          Icon(Icons.person),
+          SizedBox(width: 10,)
+        ],
+      ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         onTap: handleNavBarChange,
