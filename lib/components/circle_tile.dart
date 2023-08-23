@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 
 class MyCircle extends StatelessWidget {
-
   final String child;
 
-  const MyCircle({ required this.child });
+  const MyCircle({required this.child});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +16,11 @@ class MyCircle extends StatelessWidget {
           shape: BoxShape.circle,
           color: Colors.grey[350],
         ),
-        child: Center(child: Text(child, style: TextStyle(fontSize: 18),)),
+        child: ClipOval(
+            child: Image.asset(
+          child,
+          fit: BoxFit.cover,
+        )),
       ),
     );
   }

@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:login/types/types.dart';
 
 List<Posts> UserPosts = [
@@ -7,7 +8,8 @@ List<Posts> UserPosts = [
       firstName: 'Marvin', 
       lastName: 'Villalon'
     ),
-    text: '...Ready For It?'
+    text: '...Ready For It?',
+    image: 'lib/images/ready.jpg'
   ),
   Posts(
     id: 2,
@@ -23,7 +25,8 @@ List<Posts> UserPosts = [
       firstName: 'Marvin', 
       lastName: 'Villalon'
     ),
-    text: 'I Did Something Bad'
+    text: 'I Did Something Bad',
+    image: 'lib/images/oops.jpg'
   ),
   Posts(
     id: 4,
@@ -69,7 +72,8 @@ List<Posts> UserPosts = [
       firstName: 'Marvin', 
       lastName: 'Villalon'
     ),
-    text: 'Getaway Car'
+    text: 'Getaway Car',
+    image: 'lib/images/car.jpg'
   ),Posts(
     id: 10,
     name: Name(
@@ -115,4 +119,28 @@ List<Posts> UserPosts = [
     ),
     text: 'New Year\'s Day'
   )
+];
+
+List<String> UserStories = [
+  'lib/images/marg.png',
+  'lib/images/marg.png',
+  'lib/images/marg.png',
+  'lib/images/marg.png',
+  'lib/images/marg.png',
+  'lib/images/marg.png',
+  'lib/images/marg.png',
+  'lib/images/marg.png',
+  'lib/images/marg.png',
+  'lib/images/marg.png',
+  'lib/images/marg.png',
+  'lib/images/marg.png',
+];
+
+List<Icon> SocialIcons = [
+  Icon(Icons.facebook),
+  Icon(Icons.snapchat),
+  Icon(Icons.telegram),
+  Icon(Icons.messenger),
+  Icon(Icons.email),
+  Icon(Icons.cloud_upload_rounded),
 ];
